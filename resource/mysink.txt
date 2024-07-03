@@ -1,0 +1,418 @@
+
+Call:
+lm(formula = Fertility ~ ., data = swiss)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-15.2743  -5.2617   0.5032   4.1198  15.3213 
+
+Coefficients:
+                 Estimate   Std. Error  t value   Pr(>|t|)    
+(Intercept)      66.91518   10.70604    6.250     1.91e-07 ***
+Agriculture      -0.17211    0.07030    -2.448    0.01873 *  
+Examination      -0.25801    0.25388    -1.016    0.31546    
+Education        -0.87094    0.18303    -4.758    2.43e-05 ***
+Catholic          0.10412    0.03526    2.953     0.00519 ** 
+Infant.Mortality  1.07705    0.38172    2.822     0.00734 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.165 on 41 degrees of freedom
+Multiple R-squared:  0.7067,	Adjusted R-squared:  0.671 
+F-statistic: 19.76 on 5 a
+
+
+
+Call:
+lm(formula = Fertility ~ Agriculture + Education + Catholic + 
+    Infant.Mortality, data = swiss)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-14.6765  -6.0522   0.7514   3.1664  16.1422 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      62.10131    9.60489   6.466 8.49e-08 ***
+Agriculture      -0.15462    0.06819  -2.267  0.02857 *  
+Education        -0.98026    0.14814  -6.617 5.14e-08 ***
+Catholic          0.12467    0.02889   4.315 9.50e-05 ***
+Infant.Mortality  1.07844    0.38187   2.824  0.00722 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.168 on 42 degrees of freedom
+Multiple R-squared:  0.6993,	Adjusted R-squared:  0.6707 
+F-statistic: 24.42 on 4 and 42 DF,  p-value: 1.717e-1  nvmax     RMSE  Rsquared      MAE   RMSESD RsquaredSD    MAESD
+1     1 9.227550 0.4366973 7.857870 1.777707  0.3218266 1.939873
+2     2 8.710164 0.4781831 7.513855 1.660346  0.2653541 1.644553
+3     3 8.085123 0.6207448 7.038078 2.616606  0.2398241 2.785069
+4     4 7.376207 0.6699474 6.282399 2.646797  0.2724446 2.671684
+5     5 7.424916 0.6922072 6.312180 2.891761  0.2722295 2.828701
+  nvmax
+4     4
+  nvmax
+4     4
+Subset selection object
+5 Variables  (and intercept)
+                 Forced in Forced out
+Agriculture          FALSE      FALSE
+Examination          FALSE      FALSE
+Education            FALSE      FALSE
+Catholic             FALSE      FALSE
+Infant.Mortality     FALSE      FALSE
+1 subsets of each size up to 4
+Selection Algorithm: backward
+         Agriculture Examination Education Catholic Infant.Mortality
+1  ( 1 ) " "         " "         "*"       " "      " "             
+2  ( 1 ) " "         " "         "*"       "*"      " "             
+3  ( 1 ) " "         " "         "*"       "*"      "*"             
+4  ( 1 ) "*"         " "         "*"       "*"      "*"             
+     (Intercept)      Agriculture        Education         Catholic 
+      62.1013116       -0.1546175       -0.9802638        0.1246664 
+Infant.Mortality 
+       1.0784422 
+     (Intercept)      Agriculture        Education         Catholic Infant.Mortality 
+      62.1013116       -0.1546175       -0.9802638        0.1246664        1.0784422 
+
+Call:
+lm(formula = Fertility ~ Agriculture + Education + Catholic + 
+    Infant.Mortality, data = swiss)
+
+Coefficients:
+     (Intercept)       Agriculture         Education          Catholic  Infant.Mortality  
+         62.1013           -0.1546           -0.9803            0.1247            1.0784  
+
+  nvmax      RMSE  Rsquared      MAE   RMSESD RsquaredSD    MAESD
+1     1 10.795344 0.3098175 8.920272 1.905114  0.2646606 1.578493
+2     2 10.022688 0.4641238 8.434519 2.770810  0.2516222 2.252324
+3     3  8.179622 0.6092844 6.997800 2.037227  0.2239489 2.462710
+4     4  7.898320 0.6394207 6.912296 2.503385  0.2756431 2.415272
+5     5  7.424916 0.6922072 6.312180 2.891761  0.2722295 2.828701
+  nvmax
+5     5
+Subset selection object
+5 Variables  (and intercept)
+                 Forced in Forced out
+Agriculture          FALSE      FALSE
+Examination          FALSE      FALSE
+Education            FALSE      FALSE
+Catholic             FALSE      FALSE
+Infant.Mortality     FALSE      FALSE
+1 subsets of each size up to 5
+Selection Algorithm: 'sequential replacement'
+         Agriculture Examination Education Catholic Infant.Mortality
+1  ( 1 ) " "         " "         "*"       " "      " "             
+2  ( 1 ) " "         " "         "*"       "*"      " "             
+3  ( 1 ) " "         " "         "*"       "*"      "*"             
+4  ( 1 ) "*"         "*"         "*"       "*"      " "             
+5  ( 1 ) "*"         "*"         "*"       "*"      "*"             
+(Intercept) Agriculture Examination   Education    Catholic 
+ 91.0554239  -0.2206455  -0.2605824  -0.9616124   0.1244184 
+
+Call:
+lm(formula = Fertility ~ Agriculture + Education + Catholic + 
+    Infant.Mortality, data = swiss)
+
+Coefficients:
+     (Intercept)       Agriculture         Education          Catholic  Infant.Mortality  
+         62.1013           -0.1546           -0.9803            0.1247            1.0784  
+
+     (Intercept)      Agriculture      Examination        Education         Catholic 
+      66.9151817       -0.1721140       -0.2580082       -0.8709401        0.1041153 
+Infant.Mortality 
+       1.0770481 
+
+Call:
+lm(formula = Fertility ~ ., data = swiss)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-15.2743  -5.2617   0.5032   4.1198  15.3213 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      66.91518   10.70604   6.250 1.91e-07 ***
+Agriculture      -0.17211    0.07030  -2.448  0.01873 *  
+Examination      -0.25801    0.25388  -1.016  0.31546    
+Education        -0.87094    0.18303  -4.758 2.43e-05 ***
+Catholic          0.10412    0.03526   2.953  0.00519 ** 
+Infant.Mortality  1.07705    0.38172   2.822  0.00734 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.165 on 41 degrees of freedom
+Multiple R-squared:  0.7067,	Adjusted R-squared:  0.671 
+F-statistic: 19.76 on 5 and 41 DF,  p-value: 5.594e-10
+
+
+Call:
+lm(formula = Fertility ~ Agriculture + Education + Catholic + 
+    Infant.Mortality, data = swiss)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-14.6765  -6.0522   0.7514   3.1664  16.1422 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      62.10131    9.60489   6.466 8.49e-08 ***
+Agriculture      -0.15462    0.06819  -2.267  0.02857 *  
+Education        -0.98026    0.14814  -6.617 5.14e-08 ***
+Catholic          0.12467    0.02889   4.315 9.50e-05 ***
+Infant.Mortality  1.07844    0.38187   2.824  0.00722 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.168 on 42 degrees of freedom
+Multiple R-squared:  0.6993,	Adjusted R-squared:  0.6707 
+F-statistic: 24.42 on 4 and 42 DF,  p-value: 1.717e-10
+
+             Fertility Agriculture Examination Education Catholic Infant.Mortality
+Courtelary        80.2        17.0          15        12     9.96             22.2
+Delemont          83.1        45.1           6         9    84.84             22.2
+Franches-Mnt      92.5        39.7           5         5    93.40             20.2
+Moutier           85.8        36.5          12         7    33.77             20.3
+Neuveville        76.9        43.5          17        15     5.16             20.6
+Porrentruy        76.1        35.3           9         7    90.57             26.6
+Broye             83.8        70.2          16         7    92.85             23.6
+Glane             92.4        67.8          14         8    97.16             24.9
+Gruyere           82.4        53.3          12         7    97.67             21.0
+Sarine            82.9        45.2          16        13    91.38             24.4
+Veveyse           87.1        64.5          14         6    98.61             24.5
+Aigle             64.1        62.0          21        12     8.52             16.5
+Aubonne           66.9        67.5          14         7     2.27             19.1
+Avenches          68.9        60.7          19        12     4.43             22.7
+Cossonay          61.7        69.3          22         5     2.82             18.7
+Echallens         68.3        72.6          18         2    24.20             21.2
+Grandson          71.7        34.0          17         8     3.30             20.0
+Lausanne          55.7        19.4          26        28    12.11             20.2
+La Vallee         54.3        15.2          31        20     2.15             10.8
+Lavaux            65.1        73.0          19         9     2.84             20.0
+Morges            65.5        59.8          22        10     5.23             18.0
+Moudon            65.0        55.1          14         3     4.52             22.4
+Nyone             56.6        50.9          22        12    15.14             16.7
+Orbe              57.4        54.1          20         6     4.20             15.3
+Oron              72.5        71.2          12         1     2.40             21.0
+Payerne           74.2        58.1          14         8     5.23             23.8
+Paysd'enhaut      72.0        63.5           6         3     2.56             18.0
+Rolle             60.5        60.8          16        10     7.72             16.3
+Vevey             58.3        26.8          25        19    18.46             20.9
+Yverdon           65.4        49.5          15         8     6.10             22.5
+Conthey           75.5        85.9           3         2    99.71             15.1
+Entremont         69.3        84.9           7         6    99.68             19.8
+Herens            77.3        89.7           5         2   100.00             18.3
+Martigwy          70.5        78.2          12         6    98.96             19.4
+Monthey           79.4        64.9           7         3    98.22             20.2
+St Maurice        65.0        75.9           9         9    99.06             17.8
+Sierre            92.2        84.6           3         3    99.46             16.3
+Sion              79.3        63.1          13        13    96.83             18.1
+Boudry            70.4        38.4          26        12     5.62             20.3
+La Chauxdfnd      65.7         7.7          29        11    13.79             20.5
+Le Locle          72.7        16.7          22        13    11.22             18.9
+Neuchatel         64.4        17.6          35        32    16.92             23.0
+Val de Ruz        77.6        37.6          15         7     4.97             20.0
+ValdeTravers      67.6        18.7          25         7     8.65             19.5
+V. De Geneve      35.0         1.2          37        53    42.34             18.0
+Rive Droite       44.7        46.6          16        29    50.43             18.2
+Rive Gauche       42.8        27.7          22        29    58.33             19.3
+ [1] 17.0 45.1 39.7 36.5 43.5 35.3 70.2 67.8 53.3 45.2 64.5 62.0 67.5 60.7 69.3 72.6 34.0 19.4 15.2
+[20] 73.0 59.8 55.1 50.9 54.1 71.2 58.1 63.5 60.8 26.8 49.5 85.9 84.9 89.7 78.2 64.9 75.9 84.6 63.1
+[39] 38.4  7.7 16.7 17.6 37.6 18.7  1.2 46.6 27.7
+[1] "double"
+[1mindexed[0m [32m3.00B[0m in [36m 0s[0m, [32m187.81kB/s[0m[1mindexed[0m [32m1.00TB[0m in [36m 0s[0m, [32m573.38TB/s[0m                                                                                                  [1mindexing[0m [34m常规超声统计分析.csv[0m [=======================================] [32m467.42MB/s[0m, eta: [36m 0s[0m                                                                                                                                       [1mindexing[0m [34m常规超声统计分析.csv[0m [=========================================] [32m1.37GB/s[0m, eta: [36m 0s[0m                                                                                                                                       <collector_double>
+[1mindexing[0m [34m常规超声统计分析.csv[0m [=============================] [32m1.49GB/s[0m, eta: [36m 0s[0m                                                                                                                           # A tibble: 3 × 18
+  label  性别  年龄 前长径 前厚径 前PSV  前RI 前造影分级 后长径 后厚径 后PSV  后RI
+  <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl> <dbl>      <dbl>  <dbl>  <dbl> <dbl> <dbl>
+1     1     0    67     33     19   9.1  0.66          4     45     20  58.2  0.75
+2     0     0    57     35     13  20.9  0.8           4     25     10   3.8  0.6 
+3     1     1    62     35     12  20.9  0.84          2     31     10  20.9  0.84
+# ℹ 6 more variables: 后造影分级 <dbl>, 长径变化率 <dbl>, 厚径变化率 <dbl>,
+#   PSV变化率 <dbl>, RI变化率 <dbl>, 降级正确版 <dbl>
+
+Call:
+lm(formula = label ~ ., data = my_data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.02879 -0.33287  0.08434  0.27754  0.67609 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  0.4704288  0.2676487   1.758   0.0806 .
+性别         0.0428222  0.0714291   0.600   0.5496  
+年龄        -0.0009196  0.0029962  -0.307   0.7593  
+前长径      -0.0058291  0.0071700  -0.813   0.4173  
+前厚径      -0.0069305  0.0094213  -0.736   0.4630  
+前PSV        0.0046552  0.0053432   0.871   0.3848  
+前RI        -0.1728508  0.8190455  -0.211   0.8331  
+前造影分级  -0.5710977  0.4037187  -1.415   0.1590  
+后长径       0.0094106  0.0082697   1.138   0.2567  
+后厚径       0.0015442  0.0130802   0.118   0.9062  
+后PSV        0.0018506  0.0074380   0.249   0.8038  
+后RI         0.0879919  0.8625846   0.102   0.9189  
+后造影分级   0.7124947  0.4048788   1.760   0.0802 .
+长径变化率  -0.0309327  0.3300290  -0.094   0.9254  
+厚径变化率  -0.0706723  0.2055630  -0.344   0.7314  
+PSV变化率    0.0402718  0.0786314   0.512   0.6092  
+RI变化率    -0.2798129  0.6292754  -0.445   0.6571  
+降级正确版   0.5597620  0.4039659   1.386   0.1676  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3983 on 172 degrees of freedom
+Multiple R-squared:  0.2861,	Adjusted R-squared:  0.2156 
+F-statistic: 4.056 on 17 and 172 DF,  p-value: 8.984e-07
+
+
+Call:
+lm(formula = label ~ 前长径 + 前厚径 + 前PSV + 前造影分级 + 
+    后长径 + 后造影分级 + RI变化率 + 降级正确版, 
+    data = my_data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.99910 -0.32717  0.09846  0.28309  0.68374 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.402200   0.129789   3.099 0.002253 ** 
+前长径      -0.006817   0.002747  -2.482 0.013982 *  
+前厚径      -0.008651   0.004888  -1.770 0.078410 .  
+前PSV        0.005828   0.003433   1.698 0.091301 .  
+前造影分级  -0.584227   0.393082  -1.486 0.138946    
+后长径       0.011101   0.003001   3.699 0.000287 ***
+后造影分级   0.724698   0.394113   1.839 0.067582 .  
+RI变化率    -0.355112   0.137683  -2.579 0.010697 *  
+降级正确版   0.569584   0.393488   1.448 0.149480    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3905 on 181 degrees of freedom
+Multiple R-squared:  0.2777,	Adjusted R-squared:  0.2458 
+F-statistic: 8.699 on 8 and 181 DF,  p-value: 5.033e-10
+
+  nvmax      RMSE  Rsquared       MAE     RMSESD RsquaredSD      MAESD
+1     1 0.4134824 0.2016286 0.3480257 0.04272307  0.1453729 0.04064955
+2     2 0.3991508 0.2505060 0.3386940 0.04542771  0.1744734 0.03864317
+3     3 0.3936450 0.2644153 0.3325113 0.04504957  0.1791488 0.03721593
+4     4 0.3991334 0.2343251 0.3380136 0.04580963  0.1539950 0.03739457
+5     5 0.4079524 0.2123604 0.3480877 0.05614501  0.1897025 0.04925723
+  nvmax
+3     3
+Subset selection object
+17 Variables  (and intercept)
+           Forced in Forced out
+性别           FALSE      FALSE
+年龄           FALSE      FALSE
+前长径         FALSE      FALSE
+前厚径         FALSE      FALSE
+前PSV          FALSE      FALSE
+前RI           FALSE      FALSE
+前造影分级     FALSE      FALSE
+后长径         FALSE      FALSE
+后厚径         FALSE      FALSE
+后PSV          FALSE      FALSE
+后RI           FALSE      FALSE
+后造影分级     FALSE      FALSE
+长径变化率     FALSE      FALSE
+厚径变化率     FALSE      FALSE
+PSV变化率      FALSE      FALSE
+RI变化率       FALSE      FALSE
+降级正确版     FALSE      FALSE
+1 subsets of each size up to 3
+Selection Algorithm: 'sequential replacement'
+         性别 年龄 前长径 前厚径 前PSV 前RI 前造影分级 后长径 后厚径 后PSV 后RI
+1  ( 1 ) " "  " "  " "    " "    " "   " "  " "        " "    " "    " "   " " 
+2  ( 1 ) " "  " "  " "    " "    " "   " "  " "        " "    " "    " "   " " 
+3  ( 1 ) " "  " "  " "    " "    " "   " "  " "        " "    " "    " "   " " 
+         后造影分级 长径变化率 厚径变化率 PSV变化率 RI变化率 降级正确版
+1  ( 1 ) "*"        " "        " "        " "       " "      " "       
+2  ( 1 ) "*"        "*"        " "        " "       " "      " "       
+3  ( 1 ) "*"        "*"        " "        " "       "*"      " "       
+(Intercept)  后造影分级  长径变化率    RI变化率 
+  0.4270362   0.1660083  -0.3636928  -0.3359616 
+  nvmax      RMSE  Rsquared       MAE     RMSESD RsquaredSD      MAESD
+1     1 0.4134824 0.2016286 0.3480257 0.04272307  0.1453729 0.04064955
+2     2 0.4102599 0.2274628 0.3461622 0.04053154  0.1956267 0.03664518
+3     3 0.4117069 0.2221829 0.3450263 0.04977583  0.1865210 0.04409522
+4     4 0.4111611 0.2277779 0.3462075 0.05445660  0.1946922 0.04907217
+5     5 0.4099766 0.2231642 0.3451409 0.05426489  0.1963613 0.05227394
+  nvmax
+5     5
+Subset selection object
+17 Variables  (and intercept)
+           Forced in Forced out
+性别           FALSE      FALSE
+年龄           FALSE      FALSE
+前长径         FALSE      FALSE
+前厚径         FALSE      FALSE
+前PSV          FALSE      FALSE
+前RI           FALSE      FALSE
+前造影分级     FALSE      FALSE
+后长径         FALSE      FALSE
+后厚径         FALSE      FALSE
+后PSV          FALSE      FALSE
+后RI           FALSE      FALSE
+后造影分级     FALSE      FALSE
+长径变化率     FALSE      FALSE
+厚径变化率     FALSE      FALSE
+PSV变化率      FALSE      FALSE
+RI变化率       FALSE      FALSE
+降级正确版     FALSE      FALSE
+1 subsets of each size up to 5
+Selection Algorithm: backward
+         性别 年龄 前长径 前厚径 前PSV 前RI 前造影分级 后长径 后厚径 后PSV 后RI
+1  ( 1 ) " "  " "  " "    " "    " "   " "  " "        " "    " "    " "   " " 
+2  ( 1 ) " "  " "  " "    " "    " "   " "  " "        "*"    " "    " "   " " 
+3  ( 1 ) " "  " "  "*"    " "    " "   " "  " "        "*"    " "    " "   " " 
+4  ( 1 ) " "  " "  "*"    " "    " "   " "  " "        "*"    " "    " "   " " 
+5  ( 1 ) " "  " "  "*"    "*"    " "   " "  " "        "*"    " "    " "   " " 
+         后造影分级 长径变化率 厚径变化率 PSV变化率 RI变化率 降级正确版
+1  ( 1 ) "*"        " "        " "        " "       " "      " "       
+2  ( 1 ) "*"        " "        " "        " "       " "      " "       
+3  ( 1 ) "*"        " "        " "        " "       " "      " "       
+4  ( 1 ) "*"        " "        " "        " "       "*"      " "       
+5  ( 1 ) "*"        " "        " "        " "       "*"      " "       
+ (Intercept)       前长径       后长径   后造影分级 
+ 0.318459075 -0.008298436  0.010782112  0.172221575 
+  nvmax      RMSE  Rsquared       MAE     RMSESD RsquaredSD      MAESD
+1     1 0.4134824 0.2016286 0.3480257 0.04272307  0.1453729 0.04064955
+2     2 0.3991508 0.2505060 0.3386940 0.04542771  0.1744734 0.03864317
+3     3 0.3936450 0.2644153 0.3325113 0.04504957  0.1791488 0.03721593
+4     4 0.3944057 0.2556533 0.3358278 0.04346517  0.1644799 0.03800791
+5     5 0.3983849 0.2465777 0.3364866 0.04594817  0.1791077 0.03923335
+  nvmax
+3     3
+Subset selection object
+17 Variables  (and intercept)
+           Forced in Forced out
+性别           FALSE      FALSE
+年龄           FALSE      FALSE
+前长径         FALSE      FALSE
+前厚径         FALSE      FALSE
+前PSV          FALSE      FALSE
+前RI           FALSE      FALSE
+前造影分级     FALSE      FALSE
+后长径         FALSE      FALSE
+后厚径         FALSE      FALSE
+后PSV          FALSE      FALSE
+后RI           FALSE      FALSE
+后造影分级     FALSE      FALSE
+长径变化率     FALSE      FALSE
+厚径变化率     FALSE      FALSE
+PSV变化率      FALSE      FALSE
+RI变化率       FALSE      FALSE
+降级正确版     FALSE      FALSE
+1 subsets of each size up to 3
+Selection Algorithm: forward
+         性别 年龄 前长径 前厚径 前PSV 前RI 前造影分级 后长径 后厚径 后PSV 后RI
+1  ( 1 ) " "  " "  " "    " "    " "   " "  " "        " "    " "    " "   " " 
+2  ( 1 ) " "  " "  " "    " "    " "   " "  " "        " "    " "    " "   " " 
+3  ( 1 ) " "  " "  " "    " "    " "   " "  " "        " "    " "    " "   " " 
+         后造影分级 长径变化率 厚径变化率 PSV变化率 RI变化率 降级正确版
+1  ( 1 ) "*"        " "        " "        " "       " "      " "       
+2  ( 1 ) "*"        "*"        " "        " "       " "      " "       
+3  ( 1 ) "*"        "*"        " "        " "       "*"      " "       
+(Intercept)  后造影分级  长径变化率    RI变化率 
+  0.4270362   0.1660083  -0.3636928  -0.3359616 
